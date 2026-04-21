@@ -2,3 +2,4 @@ numpy>=1.24
 scipy>=1.10
 pandas>=2.0
 opfunu>=1.0
+setuptools<81

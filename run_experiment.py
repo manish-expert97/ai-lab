@@ -23,7 +23,7 @@ DIM_MAP    = {2014: 30, 2017: 30, 2020: 10, 2022: 10}
 FUNC_RANGE = {2014: range(1, 31), 2017: range(1, 30), 2020: range(1, 11), 2022: range(1, 13)}
 RESULTS_DIR = os.path.join(os.path.dirname(__file__), "results")
 REPORT_PATH = os.path.join(os.path.dirname(__file__), "report.md")
-MAX_WORKERS = 16       # number of parallel processes (set to your CPU core count)
+MAX_WORKERS = 8      # number of parallel processes (set to your CPU core count)
 
 # ===================== Benchmark helpers =====================
 
@@ -144,7 +144,8 @@ def run_experiments(benchmarks, algo_names=None):
                     elapsed = time.time() - t0
                     eta = elapsed / done * (total - done) if done else 0
                     print(f"  [{done}/{total}]  "
-                          f"elapsed {elapsed/60:.1f}min  ETA {eta/60:.1f}min")
+                          f"elapsed {elapsed/60:.1f}min  ETA {eta/60:.1f}min",
+                          flush=True)
 
     df = pd.DataFrame(results)
     return df

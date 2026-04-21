@@ -3,10 +3,10 @@
 
 ## 1  Introduction
 
-This report compares **ISBOA** (Improved SBOA with Full DE Mechanics, Opposition-Based Learning Initialisation, and Non-Linear Adaptive Evasion Factor) against the base SBOA and seven recent nature-inspired optimisation algorithms:
+This report compares **MGOA** (Modified GOA with Full DE Mechanics, Opposition-Based Learning Initialisation, and Non-Linear Adaptive Evasion Factor) against the base GOA and seven recent nature-inspired optimisation algorithms:
 
-- ISBOA
-- SBOA
+- MGOA
+- GOA
 - GWO
 - WOA
 - SCA
@@ -15,7 +15,7 @@ This report compares **ISBOA** (Improved SBOA with Full DE Mechanics, Opposition
 - MPA
 - AOA
 
-## 2  Improvements in ISBOA
+## 2  Improvements in GOA
 
 ### 2.1 Full Differential Evolution (DE) Mechanics
 The exploration phase now uses DE/rand/1 (Stage 1), DE/current-to-best/1 (Stage 2), and DE/best/1 + Lévy (Stage 3) mutation strategies, followed by **binomial crossover** and **greedy selection** to preserve the fittest traits and prevent premature convergence.
@@ -41,7 +41,7 @@ The fixed $(1 - t/T)^2$ evasion coefficient is replaced by $\alpha = 1 - (FEs / 
 
 ### Mean (Std)
 
-| Function | ISBOA | SBOA | GWO | WOA | SCA | SSA | HHO | MPA | AOA |
+| Function | MGOA | GOA | GWO | WOA | SCA | SSA | HHO | MPA | AOA |
 |----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|
 | F1 | 5.46e+03 (3.88e+03) | 5.48e+05 (5.49e+05) | 3.17e+09 (1.31e+09) | 3.16e+10 (8.99e+09) | 2.47e+10 (4.71e+09) | 4.27e+03 (3.85e+03) | 1.39e+09 (5.74e+08) | 1.37e+09 (2.75e+08) | 2.99e+10 (4.35e+09) |
 | F2 | 6.69e+00 (1.23e+01) | 8.38e+02 (8.71e+02) | 2.98e+04 (9.61e+03) | 7.50e+04 (2.61e+04) | 4.48e+04 (4.72e+03) | 4.74e-08 (1.91e-08) | 1.24e+04 (4.80e+03) | 5.71e+03 (1.66e+03) | 8.86e+04 (1.85e+04) |
@@ -75,7 +75,7 @@ The fixed $(1 - t/T)^2$ evasion coefficient is replaced by $\alpha = 1 - (FEs / 
 
 ### Rankings
 
-| Function | ISBOA | SBOA | GWO | WOA | SCA | SSA | HHO | MPA | AOA |
+| Function | MGOA | GOA | GWO | WOA | SCA | SSA | HHO | MPA | AOA |
 |----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|
 | F1 | 2 | 3 | 6 | 9 | 7 | 1 | 5 | 4 | 8 |
 | F2 | 2 | 3 | 6 | 8 | 7 | 1 | 5 | 4 | 9 |
@@ -112,7 +112,7 @@ The fixed $(1 - t/T)^2$ evasion coefficient is replaced by $\alpha = 1 - (FEs / 
 
 ### Mean (Std)
 
-| Function | ISBOA | SBOA | GWO | WOA | SCA | SSA | HHO | MPA | AOA |
+| Function | MGOA | GOA | GWO | WOA | SCA | SSA | HHO | MPA | AOA |
 |----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|
 | F1 | 3.64e+03 (3.80e+03) | 3.25e+03 (2.39e+03) | 8.04e+07 (1.64e+08) | 9.31e+08 (6.09e+08) | 9.19e+08 (4.21e+08) | 2.97e+03 (2.64e+03) | 4.47e+06 (2.88e+06) | 3.69e+05 (1.79e+05) | 5.34e+04 (4.32e+04) |
 | F2 | -2.63e+03 (6.30e+02) | -2.55e+03 (5.39e+02) | -1.65e+03 (6.26e+02) | -6.77e+02 (9.75e+02) | -9.32e+02 (4.92e+02) | -1.63e+03 (9.36e+02) | -1.38e+03 (7.11e+02) | -1.44e+03 (3.28e+02) | -2.51e+03 (2.89e+02) |
@@ -127,7 +127,7 @@ The fixed $(1 - t/T)^2$ evasion coefficient is replaced by $\alpha = 1 - (FEs / 
 
 ### Rankings
 
-| Function | ISBOA | SBOA | GWO | WOA | SCA | SSA | HHO | MPA | AOA |
+| Function | MGOA | GOA | GWO | WOA | SCA | SSA | HHO | MPA | AOA |
 |----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|
 | F1 | 3 | 2 | 7 | 9 | 8 | 1 | 6 | 5 | 4 |
 | F2 | 1 | 2 | 4 | 9 | 8 | 5 | 7 | 6 | 3 |
@@ -145,7 +145,7 @@ The fixed $(1 - t/T)^2$ evasion coefficient is replaced by $\alpha = 1 - (FEs / 
 
 ### Mean (Std)
 
-| Function | ISBOA | SBOA | GWO | WOA | SCA | SSA | HHO | MPA | AOA |
+| Function | MGOA | GOA | GWO | WOA | SCA | SSA | HHO | MPA | AOA |
 |----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|
 | F1 | 5.82e-07 (3.68e-07) | 2.30e-08 (3.69e-08) | 1.06e+02 (4.02e+01) | 6.79e+03 (3.33e+03) | 6.13e+02 (3.32e+02) | 9.87e-10 (4.89e-10) | 1.37e+01 (6.32e+00) | 5.02e-01 (2.64e-01) | 7.17e-02 (5.02e-02) |
 | F2 | 6.08e+00 (2.59e+00) | 5.04e+00 (4.58e+00) | 4.50e+01 (3.17e+01) | 2.19e+02 (1.10e+02) | 8.24e+01 (3.09e+01) | 8.98e-01 (1.75e+00) | 4.14e+01 (3.22e+01) | 9.01e-01 (6.70e-01) | 2.52e+01 (3.68e+01) |
@@ -162,7 +162,7 @@ The fixed $(1 - t/T)^2$ evasion coefficient is replaced by $\alpha = 1 - (FEs / 
 
 ### Rankings
 
-| Function | ISBOA | SBOA | GWO | WOA | SCA | SSA | HHO | MPA | AOA |
+| Function | MGOA | GOA | GWO | WOA | SCA | SSA | HHO | MPA | AOA |
 |----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|
 | F1 | 3 | 2 | 7 | 9 | 8 | 1 | 6 | 5 | 4 |
 | F2 | 4 | 3 | 7 | 9 | 8 | 1 | 6 | 2 | 5 |
@@ -180,10 +180,10 @@ The fixed $(1 - t/T)^2$ evasion coefficient is replaced by $\alpha = 1 - (FEs / 
 
 ## 5  Wilcoxon Rank-Sum Test
 
-Comparison of ISBOA vs. each opponent (significance level α = 0.05).  
-**+** = ISBOA wins, **=** = tie, **-** = ISBOA loses.
+Comparison of MGOA vs. each opponent (significance level α = 0.05).  
+**+** = MGOA wins, **=** = tie, **-** = MGOA loses.
 
-| Year | Function | AOA | GWO | HHO | MPA | SBOA | SCA | SSA | WOA |
+| Year | Function | AOA | GWO | HHO | MPA | GOA | SCA | SSA | WOA |
 |------|----------|---|---|---|---|---|---|---|---|
 | 2017 | F1 | + | + | + | + | + | + | = | + |
 | 2017 | F10 | + | + | + | + | + | + | + | + |
@@ -245,7 +245,7 @@ Comparison of ISBOA vs. each opponent (significance level α = 0.05).
 | GWO | 39 | 12 | 0 |
 | HHO | 47 | 4 | 0 |
 | MPA | 34 | 14 | 3 |
-| SBOA | 12 | 27 | 12 |
+| GOA | 12 | 27 | 12 |
 | SCA | 48 | 1 | 2 |
 | SSA | 22 | 22 | 7 |
 | WOA | 49 | 2 | 0 |
@@ -254,8 +254,8 @@ Comparison of ISBOA vs. each opponent (significance level α = 0.05).
 
 | Algorithm | Avg Rank |
 |-----------|----------|
-| ISBOA | 2.20 |
-| SBOA | 2.27 |
+| MGOA | 2.20 |
+| GOA | 2.27 |
 | GWO | 5.25 |
 | WOA | 8.37 |
 | SCA | 7.47 |
@@ -274,8 +274,8 @@ Known best (literature): **6059.714**
 
 | Algorithm | Mean | Std | Best Run |
 |-----------|------|-----|----------|
-| ISBOA | 5883.403550 | 15.221688 | 5871.953581 |
-| SBOA | 6166.361148 | 157.826163 | 5971.531147 |
+| MGOA | 5883.403550 | 15.221688 | 5871.953581 |
+| GOA | 6166.361148 | 157.826163 | 5971.531147 |
 | GWO | 6315.613346 | 488.145949 | 5880.034267 |
 | WOA | 16272.339720 | 7669.583749 | 6926.862131 |
 | SCA | 7903.466769 | 734.850698 | 7262.904994 |
@@ -290,8 +290,8 @@ Known best (literature): **0.012665**
 
 | Algorithm | Mean | Std | Best Run |
 |-----------|------|-----|----------|
-| ISBOA | 0.012798 | 0.000074 | 0.012692 |
-| SBOA | 0.012990 | 0.000314 | 0.012668 |
+| MGOA | 0.012798 | 0.000074 | 0.012692 |
+| GOA | 0.012990 | 0.000314 | 0.012668 |
 | GWO | 0.013422 | 0.000743 | 0.012791 |
 | WOA | 0.013853 | 0.001254 | 0.012688 |
 | SCA | 0.014077 | 0.001085 | 0.013105 |
@@ -306,8 +306,8 @@ Known best (literature): **263.8958**
 
 | Algorithm | Mean | Std | Best Run |
 |-----------|------|-----|----------|
-| ISBOA | 263.891492 | 0.000001 | 263.891491 |
-| SBOA | 263.893529 | 0.001792 | 263.891678 |
+| MGOA | 263.891492 | 0.000001 | 263.891491 |
+| GOA | 263.893529 | 0.001792 | 263.891678 |
 | GWO | 264.454830 | 1.085370 | 263.899274 |
 | WOA | 269.821572 | 6.430344 | 263.896975 |
 | SCA | 264.420798 | 0.311817 | 263.996147 |
@@ -318,4 +318,4 @@ Known best (literature): **263.8958**
 
 ## 8  Conclusion
 
-The results demonstrate the effectiveness of the three proposed improvements integrated into ISBOA. The full DE mechanics strengthen exploration diversity, OBL initialisation provides a better starting point, and the non-linear adaptive evasion factor ensures a smooth transition from exploration to exploitation within the 60 000 FEs budget. On all three engineering design problems, ISBOA achieved results competitive with or better than the comparison algorithms, confirming its practical applicability to real-world constrained optimisation.
+The results demonstrate the effectiveness of the three proposed improvements integrated into MGOA. The full DE mechanics strengthen exploration diversity, OBL initialisation provides a better starting point, and the non-linear adaptive evasion factor ensures a smooth transition from exploration to exploitation within the 60 000 FEs budget. On all three engineering design problems, ISBOA achieved results competitive with or better than the comparison algorithms, confirming its practical applicability to real-world constrained optimisation.

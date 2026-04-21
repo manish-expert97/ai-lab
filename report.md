@@ -1,5 +1,5 @@
 # Performance Comparison Report
-# Improved Secretary Bird Optimization Algorithm (ISBOA)
+# Modified Goat Optimization Algorithm (MGOA)
 
 ## 1  Introduction
 
